@@ -1,13 +1,21 @@
-<!DOCTYPE html><html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TOP CHEMISTRY | Mr. MaHmud RaChid</title>  <style>
+  <title>TOP CHEMISTRY | Mr. MaHmud RaChid</title>
+
+  <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 25px;
     }
 
     body {
@@ -22,6 +30,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
     .logo {
@@ -34,10 +44,20 @@
       color: #65d69b;
     }
 
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
     nav a {
       color: white;
       text-decoration: none;
-      margin-right: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #65d69b;
     }
 
     .hero {
@@ -45,6 +65,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 40px;
       padding: 60px 8%;
       background: linear-gradient(135deg, #eaf7f0, #ffffff);
     }
@@ -54,9 +75,11 @@
     }
 
     .hero h1 {
-      font-size: 58px;
+      font-size: clamp(35px, 5vw, 58px);
       color: #0b3d2e;
       margin-bottom: 15px;
+      direction: ltr;
+      text-align: right;
     }
 
     .hero h2 {
@@ -75,21 +98,25 @@
       display: inline-block;
       background: #0b3d2e;
       color: white;
-      padding: 15px 30px;
+      padding: 14px 26px;
       border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
+      border: 2px solid #0b3d2e;
       transition: 0.3s;
+      cursor: pointer;
     }
 
     .btn:hover {
       transform: translateY(-3px);
       background: #146b4f;
+      border-color: #146b4f;
     }
 
     .chemistry-box {
-      width: 330px;
-      height: 330px;
+      flex-shrink: 0;
+      width: 310px;
+      height: 310px;
       border-radius: 40px;
       background: #0b3d2e;
       color: white;
@@ -97,9 +124,69 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      font-size: 35px;
+      font-size: 32px;
       font-weight: bold;
+      line-height: 1.6;
       box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    }
+
+    .courses {
+      padding: 65px 8%;
+      text-align: center;
+    }
+
+    .section-title {
+      color: #0b3d2e;
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .section-description {
+      color: #52605b;
+      line-height: 1.8;
+      margin-bottom: 35px;
+    }
+
+    .course-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
+
+    .course-card {
+      background: white;
+      padding: 30px 22px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+      border: 1px solid #e0ece5;
+    }
+
+    .course-card h3 {
+      color: #0b3d2e;
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+
+    .course-card p {
+      color: #52605b;
+      line-height: 1.8;
+      margin-bottom: 22px;
+    }
+
+    .course-card .btn {
+      padding: 11px 20px;
+    }
+
+    .login-section {
+      background: #eaf7f0;
+      padding: 55px 20px;
+      text-align: center;
+    }
+
+    .login-section p {
+      line-height: 1.8;
+      margin: 15px 0 25px;
+      color: #52605b;
     }
 
     footer {
@@ -107,59 +194,141 @@
       padding: 25px;
       background: #0b3d2e;
       color: white;
+      line-height: 1.8;
     }
 
     @media (max-width: 800px) {
       header {
         flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
         gap: 15px;
       }
 
       .hero {
         flex-direction: column;
         text-align: center;
-        gap: 50px;
+        gap: 40px;
       }
 
       .hero h1 {
-        font-size: 42px;
+        text-align: center;
       }
 
       .chemistry-box {
-        width: 260px;
-        height: 260px;
+        width: 250px;
+        height: 250px;
+        font-size: 27px;
       }
     }
-  </style></head><body>  <header>
+  </style>
+</head>
+
+<body>
+
+  <header id="home">
     <div class="logo">
       TOP <span>CHEMISTRY</span>
-    </div><nav>
-  <a href="#">الرئيسية</a>
-  <a href="#">الكورسات</a>
-  <a href="#">تسجيل الدخول</a>
-</nav>
+    </div>
 
-  </header>  <section class="hero"><div class="hero-text">
-  <h1>TOP CHEMISTRY</h1>
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#courses">الكورسات</a>
+      <a href="login.html">تسجيل الدخول</a>
+    </nav>
+  </header>
 
-  <h2>Mr. MaHmud RaChid</h2>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>TOP CHEMISTRY</h1>
 
-  <p>
-    منصتك التعليمية في الكيمياء
-    <br>
-    شرح مبسط • متابعة مستمرة • اختبارات • نتائج
-  </p>
+        <h2>Mr. MaHmud RaChid</h2>
 
-  <a href="#" class="btn">ابدأ رحلتك الآن 🚀</a>
-</div>
+        <p>
+          منصتك التعليمية في الكيمياء
+          <br>
+          شرح مبسط • متابعة مستمرة • اختبارات • نتائج
+        </p>
 
-<div class="chemistry-box">
-  🧪<br>
-  CHEMISTRY<br>
-  TOP
-</div>
+        <a href="#courses" class="btn">ابدأ رحلتك الآن 🚀</a>
+      </div>
 
-  </section>  <footer>
+      <div class="chemistry-box">
+        <div>
+          🧪<br>
+          CHEMISTRY<br>
+          TOP
+        </div>
+      </div>
+    </section>
+
+    <section class="courses" id="courses">
+      <h2 class="section-title">الكورسات التعليمية</h2>
+
+      <p class="section-description">
+        اختار صفك الدراسي وابدأ رحلتك في فهم الكيمياء
+        مع Mr. MaHmud RaChid.
+      </p>
+
+      <div class="course-list">
+        <article class="course-card">
+          <h3>المرحلة الإعدادية</h3>
+          <p>
+            شرح مبسط للمفاهيم العلمية
+            وتدريبات تساعدك على التفوق.
+          </p>
+          <a href="login.html" class="btn">دخول الطلاب</a>
+        </article>
+
+        <article class="course-card">
+          <h3>الصف الأول الثانوي</h3>
+          <p>
+            تأسيس قوي في العلوم والكيمياء
+            مع شرح وتدريبات.
+          </p>
+          <a href="login.html" class="btn">دخول الطلاب</a>
+        </article>
+
+        <article class="course-card">
+          <h3>الصف الثاني الثانوي</h3>
+          <p>
+            شرح الدروس ومراجعة القوانين
+            وحل الأسئلة والتدريبات.
+          </p>
+          <a href="login.html" class="btn">دخول الطلاب</a>
+        </article>
+
+        <article class="course-card">
+          <h3>الصف الثالث الثانوي</h3>
+          <p>
+            مراجعات الكيمياء وحل الأسئلة
+            والاستعداد للامتحانات.
+          </p>
+          <a href="login.html" class="btn">دخول الطلاب</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="login-section">
+      <h2 class="section-title">أهلاً بك في TOP CHEMISTRY</h2>
+
+      <p>
+        هل لديك حساب طالب بالفعل؟
+        سجّل الدخول للمتابعة.
+      </p>
+
+      <a href="login.html" class="btn">تسجيل الدخول</a>
+    </section>
+  </main>
+
+  <footer>
     © 2026 TOP CHEMISTRY | Mr. MaHmud RaChid
-  </footer></body>
+    <br>
+    جميع الحقوق محفوظة
+  </footer>
+
+</body>
 </html>
