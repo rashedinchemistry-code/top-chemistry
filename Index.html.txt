@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOP CHEMISTRY | Mr. MaHmud RaChid</title>  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f8f7;
+      color: #14201c;
+    }
+
+    header {
+      background: #0b3d2e;
+      color: white;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #65d69b;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 8%;
+      background: linear-gradient(135deg, #eaf7f0, #ffffff);
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      color: #0b3d2e;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      line-height: 1.8;
+      color: #52605b;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #0b3d2e;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #146b4f;
+    }
+
+    .chemistry-box {
+      width: 330px;
+      height: 330px;
+      border-radius: 40px;
+      background: #0b3d2e;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 35px;
+      font-weight: bold;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #0b3d2e;
+      color: white;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .chemistry-box {
+        width: 260px;
+        height: 260px;
+      }
+    }
+  </style></head><body>  <header>
+    <div class="logo">
+      TOP <span>CHEMISTRY</span>
+    </div><nav>
+  <a href="#">الرئيسية</a>
+  <a href="#">الكورسات</a>
+  <a href="#">تسجيل الدخول</a>
+</nav>
+
+  </header>  <section class="hero"><div class="hero-text">
+  <h1>TOP CHEMISTRY</h1>
+
+  <h2>Mr. MaHmud RaChid</h2>
+
+  <p>
+    منصتك التعليمية في الكيمياء
+    <br>
+    شرح مبسط • متابعة مستمرة • اختبارات • نتائج
+  </p>
+
+  <a href="#" class="btn">ابدأ رحلتك الآن 🚀</a>
+</div>
+
+<div class="chemistry-box">
+  🧪<br>
+  CHEMISTRY<br>
+  TOP
+</div>
+
+  </section>  <footer>
+    © 2026 TOP CHEMISTRY | Mr. MaHmud RaChid
+  </footer></body>
+</html>
